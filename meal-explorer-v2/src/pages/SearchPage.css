@@ -1,0 +1,191 @@
+.search-page {
+  padding: 0 2rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ── Hero ── */
+.search-hero {
+  text-align: center;
+  padding: 4rem 1rem 2.5rem;
+  position: relative;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f5c842;
+  background: rgba(245,200,66,0.1);
+  border: 1px solid rgba(245,200,66,0.2);
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1.2rem;
+}
+
+.search-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  color: #f0f0f0;
+  margin: 0 0 0.6rem;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.search-hero h1 .accent {
+  background: linear-gradient(90deg, #f5c842, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.search-hero p {
+  color: #666;
+  font-size: 1.05rem;
+  margin: 0 0 2rem;
+}
+
+/* ── Search Form ── */
+.search-form {
+  display: flex;
+  gap: 0.6rem;
+  max-width: 580px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 0.4rem 0.4rem 0.4rem 1.2rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-form:focus-within {
+  border-color: rgba(245,200,66,0.35);
+  box-shadow: 0 0 0 3px rgba(245,200,66,0.08), 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #f0f0f0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  min-width: 0;
+}
+
+.search-input::placeholder { color: #444; }
+
+.search-btn {
+  padding: 0.7rem 1.6rem;
+  background: linear-gradient(135deg, #f5c842, #f97316);
+  color: #0a0a0a;
+  border: none;
+  border-radius: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(245,200,66,0.3);
+}
+
+.search-btn:hover { box-shadow: 0 6px 24px rgba(245,200,66,0.45); transform: translateY(-1px); }
+.search-btn:active { transform: scale(0.97); }
+
+/* ── Letter Filter ── */
+.letter-section {
+  margin: 1.5rem 0 2.5rem;
+}
+
+.letter-label {
+  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #444;
+  margin-bottom: 0.8rem;
+}
+
+.letter-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  justify-content: center;
+}
+
+.letter-btn {
+  width: 34px; height: 34px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  color: #555;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.letter-btn:hover {
+  background: rgba(245,200,66,0.1);
+  border-color: rgba(245,200,66,0.3);
+  color: #f5c842;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245,200,66,0.15);
+}
+
+/* ── Results Header ── */
+.results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.results-header h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.results-count {
+  font-size: 0.78rem;
+  color: #f5c842;
+  background: rgba(245,200,66,0.1);
+  border: 1px solid rgba(245,200,66,0.2);
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+}
+
+/* ── Grid ── */
+.meals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.3rem;
+  animation: fadeUp 0.4s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  color: #555;
+  gap: 1rem;
+}
+
+.state-icon { font-size: 3rem; opacity: 0.35; }
+.error-state { color: #ff4d6d; }

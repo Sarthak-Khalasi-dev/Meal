@@ -1,0 +1,95 @@
+.liked-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+.liked-header {
+  text-align: center;
+  padding: 3.5rem 1rem 2.5rem;
+}
+
+.liked-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: #f0f0f0;
+  margin: 0 0 0.4rem;
+  letter-spacing: -0.5px;
+}
+
+.accent {
+  background: linear-gradient(90deg, #ff4d6d, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.liked-header p { color: #555; font-size: 0.95rem; }
+
+/* ── Empty State ── */
+.liked-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 55vh;
+  gap: 1rem;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 4.5rem;
+  animation: floatHeart 3s ease-in-out infinite;
+  display: block;
+}
+
+@keyframes floatHeart {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-12px) scale(1.08); }
+}
+
+.liked-empty h2 {
+  font-family: 'Playfair Display', serif;
+  color: #f0f0f0;
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+.liked-empty p {
+  color: #555;
+  font-size: 0.95rem;
+  max-width: 280px;
+}
+
+.go-explore-btn {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.8rem;
+  background: linear-gradient(135deg, #f5c842, #f97316);
+  color: #0a0a0a;
+  border: none;
+  border-radius: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(245,200,66,0.3);
+  transition: all 0.2s ease;
+}
+
+.go-explore-btn:hover { box-shadow: 0 8px 28px rgba(245,200,66,0.45); transform: translateY(-2px); }
+
+/* ── Grid ── */
+.meals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.3rem;
+  animation: fadeUp 0.4s ease;
+}
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+.liked-state {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  min-height: 60vh; gap: 1rem; color: #555;
+}
